@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -25,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         save.setOnClickListener {
             onSaveTapped()
+        }
+
+        heightButton.setOnClickListener {
+            val intent = Intent(this, HeightActivity::class.java)
+            startActivity(intent)
         }
     }
 
